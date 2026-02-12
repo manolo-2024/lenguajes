@@ -5,50 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="GasServicios - Soluciones profesionales en instalaciones y mantenimiento de gas">
-    <meta name="keywords" content="gas, instalaciones, mantenimiento, reparaciones, seguridad, certificaciones, servicios energéticos">
     <title>GasServicios - Nosotros & Learning</title>
    
     <link rel="stylesheet" href="./assets/css/seccion_ingles.css">
-    <style>
-        /* Estilos para asegurar que las nuevas frases se vean bien */
-        .pronoun-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        .pronoun-card {
-            background: var(--card-bg, #fff);
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-left: 5px solid #2563eb;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .highlight {
-            color: #2563eb;
-            font-weight: bold;
-            text-decoration: underline;
-        }
-        .btn-audio {
-            margin-top: 1rem;
-            background: #2563eb;
-            color: white;
-            border: none;
-            padding: 8px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
+  
+    <link rel="stylesheet" href="./assets/css/servicios.css">
 </head>
 
 <body>
     <div class="contenedor">
         <header>
             <a href="index.html" class="logo-container" aria-label="GasServicios - Página principal">
-                <img src="https://cdn.pixabay.com/photo/2014/12/26/10/50/flame-580342_1280.jpg" alt="Logo GasServicios - Llama" class="logo-img" loading="lazy">
+                <img src="https://cdn.pixabay.com/photo/2014/12/26/10/50/flame-580342_1280.jpg" alt="Logo GasServicios" class="logo-img" loading="lazy">
                 <h1>GasServicios</h1>
             </a>
             <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo de visualización">
@@ -58,23 +26,23 @@
 
         <nav aria-label="Navegación principal">
             <ul>
-                <li><a href="index.html" target="miSitio">Inicio</a></li>
-                <li><a href="#nosotros.html" target="miSitio">Nosotros</a></li>
-                <li><a href="servicios.html" target="miSitio">Servicios</a></li>
-                <li><a href="portfolio.html" target="miSitio">Portfolio</a></li>
-                <li><a href="blog.html" target="miSitio">Blog</a></li>
-                <li><a href="contacto.html" target="miSitio">Contacto</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
 
         <main>
-            <div class="botones" role="tablist" aria-label="Seleccionar sección">
+            <div class="botones" role="tablist">
                 <button onclick="mostrarSeccion('nosotros')" id="btnNosotros" class="active">Nosotros</button>
                 <button onclick="mostrarSeccion('historia')" id="btnHistoria">Historia</button>
                 <button onclick="mostrarSeccion('productos')" id="btnProductos">Productos</button>
             </div>
 
-            <section class="seccion visible" id="nosotros" aria-labelledby="btnNosotros">
+            <section class="seccion visible" id="nosotros">
                 <h2>Nosotros</h2>
                 <h3>Experiencia y certificaciones</h3>
                 <p>Con más de 30 años de experiencia en el mercado, contamos con todas las certificaciones exigidas por la normativa nacional e internacional en el sector del gas.</p>
@@ -82,24 +50,23 @@
                 <p>Implementamos protocolos de seguridad exhaustivos en todas nuestras operaciones.</p>
             </section>
 
-            <section class="seccion" id="historia" aria-labelledby="btnHistoria" aria-hidden="true">
+            <section class="seccion" id="historia">
                 <h2>Historia</h2>
                 <h3>Orígenes humildes</h3>
                 <p>Fundada en 1990 como un pequeño taller familiar.</p>
             </section>
 
-            <section class="seccion" id="productos" aria-labelledby="btnProductos" aria-hidden="true">
+            <section class="seccion" id="productos">
                 <h2>Productos</h2>
                 <h3>Sistemas domésticos</h3>
                 <p>Kits completos para viviendas con contadores inteligentes.</p>
             </section>
 
-            <section style="margin-top: 3rem; padding: 0 1rem;">
-                <h2 style="text-align: center; color: #1e293b; margin-bottom: 2rem;">📚 Aprendizaje de Inglés Profesional</h2>
+            <section style="margin-top: 3rem;">
+                <h2 style="text-align: center; color: var(--color-primario); margin-bottom: 2rem;">📚 Aprendizaje de Inglés Profesional</h2>
                 
                 <div id="nav-bar"></div>
-                <div id="phrase-display"></div>
-
+                
                 <div class="controls-aside">
                     <h3>🔍 Filtro de Contenido</h3>
                     <input type="text" id="search" placeholder="Buscar..." onkeyup="filter()">
@@ -111,26 +78,121 @@
 
                 <div class="verb-grid" id="verb-container"></div>
 
-                <h3 style="margin-top: 3rem; border-bottom: 2px solid #2563eb; display: inline-block;">Objetos y Posesivos (Contexto GasServicios)</h3>
+                <h3 class="sub-title">Objetos y Posesivos (Contexto GasServicios)</h3>
                 <div class="pronoun-grid" id="pronoun-container">
                     </div>
 
                 <article class="examples-strip" id="examples-box">
                     <h2>💡 Frases de Uso Técnico</h2>
-                    </article>
+                </article>
             </section>
         </main>
 
         <footer class="footer">
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <a href="#" aria-label="Política de Privacidad">Política de Privacidad</a>
+                <a href="#" aria-label="Accesibilidad">Accesibilidad</a>
+                <a href="#" aria-label="Términos y condiciones">Términos y condiciones</a>
+                <a href="#" aria-label="Política de Cookies">Cookies</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <a href="#inicio" onclick="mostrarSeccion('nosotros')" aria-label="Ir a Inicio">Inicio</a>
+                <a href="#nosotros" onclick="mostrarSeccion('nosotros')" aria-label="Ir a Nosotros">Sobre Nosotros</a>
+                <a href="#servicios" onclick="mostrarSeccion('productos')" aria-label="Ir a Servicios">Servicios</a>
+                <a href="#contacto" aria-label="Ir a Contacto">Contacto</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><a href="mailto:info@gasservicios.com" aria-label="Enviar email a info@gasservicios.com">info@gasservicios.com</a></p>
+                <p><a href="tel:+34900000000" aria-label="Llamar al 900 000 000">+34 900 000 000</a></p>
+                <p>Calle Principal 123, Madrid</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Servicios</h3>
+                <p><a href="mailto:servicios@gasservicios.com" aria-label="Enviar email a servicios@gasservicios.com">servicios@gasservicios.com</a></p>
+                <p><a href="tel:+34900111111" aria-label="Llamar al 900 111 111">+34 900 111 111</a></p>
+                <p>Atención 24/7</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Portfolio</h3>
+                <a href="#" aria-label="Ver proyectos residenciales">Proyectos residenciales</a>
+                <a href="#" aria-label="Ver proyectos industriales">Proyectos industriales</a>
+                <a href="#" aria-label="Ver certificaciones">Certificaciones</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Redes Sociales</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">📘</a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">🐦</a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📸</a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">🔗</a>
+                </div>
+            </div>
+
+            <div class="footer-newsletter">
+                <h3>Newsletter</h3>
+                <form id="newsletterForm" novalidate>
+                    <label for="email">Suscríbete a nuestro boletín:</label>
+                    <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+
             <div class="footer-copyright">
                 <p>&copy; <span id="currentYear"></span> GasServicios. Todos los derechos reservados.</p>
             </div>
         </footer>
     </div>
 
-    <script src="./assets/js/script_ingles_pronombres_completos.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script>
+        // Lógica para las tarjetas de pronombres
+        const pronounPhrases = [
+            { en: "Our clients trust <span class='highlight'>us</span> for gas services.", es: "Nuestros clientes confían en nosotros para servicios de gas." },
+            { en: "We provide <span class='highlight'>them</span> with maintenance.", es: "Nosotros les brindamos mantenimiento a ellos." },
+            { en: "The company protects <span class='highlight'>it</span>.", es: "La empresa la protege (la instalación)." },
+            { en: "You can contact <span class='highlight'>him</span> for emergency repairs.", es: "Puedes contactarlo a él para reparaciones." },
+            { en: "This safety certification is <span class='highlight'>ours</span>.", es: "Esta certificación de seguridad es nuestra." },
+            { en: "The responsibility is <span class='highlight'>theirs</span>.", es: "La responsabilidad es de ellos." },
+            { en: "The decision was <span class='highlight'>hers</span>.", es: "La decisión fue de ella." },
+            { en: "She loves <span class='highlight'>me</span>.", es: "Ella me ama." }
+        ];
 
-  
+        function renderPronouns() {
+            const container = document.getElementById('pronoun-container');
+            pronounPhrases.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'pronoun-card';
+                card.innerHTML = `
+                    <div>
+                        <p class="en-text">${item.en}</p>
+                        <p class="es-text">${item.es}</p>
+                    </div>
+                    <button class="btn-audio" onclick="playText('${item.en.replace(/<[^>]*>?/gm, '').replace(/'/g, "\\'")}')">▶️ Escuchar</button>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function playText(text) {
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'en-US';
+            utterance.rate = parseFloat(document.getElementById('speedRange').value);
+            window.speechSynthesis.speak(utterance);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderPronouns();
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+        });
+    </script>
 </body>
 </html>
