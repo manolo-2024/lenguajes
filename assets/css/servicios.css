@@ -1,0 +1,98 @@
+/* =========================================================
+           AJUSTE DE ANCHOS UNIFICADOS (HEADER, MAIN, FOOTER)
+           ========================================================= */
+           :root {
+            --max-width-contenido: 90%; /* Asegura que todos midan lo mismo */
+        }
+
+        .contenedor {
+            max-width: var(--max-width-contenido);
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: var(--gap-elementos);
+        }
+
+        /* Aseguramos que main y sus secciones ocupen el 100% del contenedor */
+        main, section, .footer {
+            width: 100%;
+        }
+
+        /* =========================================================
+                   ESTILOS INTEGRADOS PARA LOS PRONOMBRES
+           ========================================================= */
+        .pronoun-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+            gap: var(--gap-elementos);
+            margin: 2rem 0;
+            width: 100%;
+        }
+
+        .pronoun-card {
+            background-color: var(--blanco-claro);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid var(--azul-medio);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition);
+        }
+
+        [data-theme="dark"] .pronoun-card {
+            background-color: var(--gris-claro);
+            border-left-color: var(--color-acento);
+        }
+
+        .pronoun-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .pronoun-card .en-text {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--color-primario);
+            margin-bottom: 0.5rem;
+        }
+
+        .pronoun-card .es-text {
+            color: var(--gris-muy-oscuro);
+            font-size: 0.9rem;
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        .highlight {
+            color: var(--naranja-oscuro);
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .btn-audio {
+            margin-top: 1rem;
+            background-color: var(--color-acento);
+            color: var(--color-primario);
+            border: none;
+            padding: 0.75rem;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-weight: bold;
+            transition: var(--transition);
+        }
+
+        .btn-audio:hover {
+            background-color: var(--color-secundario);
+            color: var(--color-texto-claro);
+        }
+
+        .sub-title {
+            margin-top: 3rem; 
+            border-bottom: 3px solid var(--color-acento); 
+            display: inline-block;
+            color: var(--color-secundario);
+            padding-bottom: 0.5rem;
+        }
