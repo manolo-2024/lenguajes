@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="GasServicios - Soluciones profesionales en instalaciones y mantenimiento de gas">
     <title>servicios</title>
-   
     <link rel="stylesheet" href="./assets/css/seccion_ingles.css">
-  
     <link rel="stylesheet" href="./assets/css/servicios.css">
 </head>
 
@@ -79,11 +77,11 @@
                 <div class="verb-grid" id="verb-container"></div>
 
                 <h3 class="sub-title">Objetos y Posesivos (Contexto GasServicios)</h3>
-                <div class="pronoun-grid" id="pronoun-container">
-                    </div>
+                <div class="pronoun-grid" id="pronoun-container"></div>
 
                 <article class="examples-strip" id="examples-box">
                     <h2>💡 Frases de Uso Técnico</h2>
+                    <div id="tech-container" class="pronoun-grid"></div>
                 </article>
             </section>
         </main>
@@ -91,69 +89,23 @@
         <footer class="footer">
             <div class="footer-section">
                 <h3>Legal</h3>
-                <a href="#" aria-label="Política de Privacidad">Política de Privacidad</a>
-                <a href="#" aria-label="Accesibilidad">Accesibilidad</a>
-                <a href="#" aria-label="Términos y condiciones">Términos y condiciones</a>
-                <a href="#" aria-label="Política de Cookies">Cookies</a>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Accesibilidad</a>
+                <a href="#">Términos y condiciones</a>
             </div>
-
-            <div class="footer-section">
-                <h3>Enlaces Rápidos</h3>
-                <a href="#inicio" onclick="mostrarSeccion('nosotros')" aria-label="Ir a Inicio">Inicio</a>
-                <a href="#nosotros" onclick="mostrarSeccion('nosotros')" aria-label="Ir a Nosotros">Sobre Nosotros</a>
-                <a href="#servicios" onclick="mostrarSeccion('productos')" aria-label="Ir a Servicios">Servicios</a>
-                <a href="#contacto" aria-label="Ir a Contacto">Contacto</a>
-            </div>
-
             <div class="footer-section">
                 <h3>Contacto</h3>
-                <p><a href="mailto:info@gasservicios.com" aria-label="Enviar email a info@gasservicios.com">info@gasservicios.com</a></p>
-                <p><a href="tel:+34900000000" aria-label="Llamar al 900 000 000">+34 900 000 000</a></p>
-                <p>Calle Principal 123, Madrid</p>
+                <p>info@gasservicios.com</p>
+                <p>+34 900 000 000</p>
             </div>
-
-            <div class="footer-section">
-                <h3>Servicios</h3>
-                <p><a href="mailto:servicios@gasservicios.com" aria-label="Enviar email a servicios@gasservicios.com">servicios@gasservicios.com</a></p>
-                <p><a href="tel:+34900111111" aria-label="Llamar al 900 111 111">+34 900 111 111</a></p>
-                <p>Atención 24/7</p>
-            </div>
-
-            <div class="footer-section">
-                <h3>Portfolio</h3>
-                <a href="#" aria-label="Ver proyectos residenciales">Proyectos residenciales</a>
-                <a href="#" aria-label="Ver proyectos industriales">Proyectos industriales</a>
-                <a href="#" aria-label="Ver certificaciones">Certificaciones</a>
-            </div>
-
-            <div class="footer-section">
-                <h3>Redes Sociales</h3>
-                <div class="social-icons">
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">📘</a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">🐦</a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📸</a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">🔗</a>
-                </div>
-            </div>
-
-            <div class="footer-newsletter">
-                <h3>Newsletter</h3>
-                <form id="newsletterForm" novalidate>
-                    <label for="email">Suscríbete a nuestro boletín:</label>
-                    <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
-                    <button type="submit">Suscribirse</button>
-                </form>
-            </div>
-
             <div class="footer-copyright">
                 <p>&copy; <span id="currentYear"></span> GasServicios. Todos los derechos reservados.</p>
             </div>
         </footer>
     </div>
 
-    <script src="./assets/js/script.js"></script>
     <script>
-                // 1. DATOS DE LAS FRASES (PRONOMBRES)
+        // 1. DATOS DE LAS FRASES (PRONOMBRES)
         const pronounPhrases = [
             { en: "She loves <span class='highlight'>me</span>.", es: "Ella me ama." },
             { en: "I call <span class='highlight'>you</span> every day.", es: "Yo te llamo todos los días." },
@@ -169,87 +121,74 @@
             { en: "The blue bag is <span class='highlight'>hers</span>.", es: "La bolsa azul es de ella." },
             { en: "The victory is <span class='highlight'>ours</span>.", es: "La victoria es nuestra." },
             { en: "Those seats are <span class='highlight'>theirs</span>.", es: "Esos asientos son suyos." },
-            { en: "This safety certification is <span class='highlight'>ours</span>.", es: "Esta certificación de seguridad es nuestra." },
-            { en: "The responsibility for the project is <span class='highlight'>theirs</span>.", es: "La responsabilidad del proyecto es de ellos." },
             { en: "The company protects <span class='highlight'>it</span> (the facility).", es: "La empresa la protege (la instalación)." },
-            { en: "You can contact <span class='highlight'>him</span> for emergency repairs.", es: "Puedes contactarlo a él para reparaciones de emergencia." },
-            { en: "The decision to install the system was <span class='highlight'>hers</span>.", es: "La decisión de instalar el sistema fue de ella." }
+            { en: "You can contact <span class='highlight'>him</span> for emergency repairs.", es: "Puedes contactarlo a él para reparaciones." }
         ];
-        
-        // 2. TUS 3 FRASES NUEVAS (SECCIÓN TÉCNICA)
+
+        // 2. TUS 3 FRASES NUEVAS
         const techPhrases = [
             { en: "You write a book.", es: "Tú escribes un libro." },
             { en: "My father doesn't work with my mother.", es: "Mi padre no trabaja con mi madre." },
             { en: "We dance reggaeton and salsa with our friends.", es: "Nosotros bailamos reggaetón y salsa con nuestros amigos." }
         ];
-        
-        // 3. CONFIGURACIÓN DE AUDIO Y SELECTORES
+
         const synth = window.speechSynthesis;
         const speedInput = document.getElementById('speedRange');
         const speedVal = document.getElementById('v-val');
-        
-        // 4. FUNCIÓN PARA RENDERIZAR LAS TARJETAS
+
+        // 4. FUNCIÓN PARA RENDERIZAR
         function renderPhrases(data, containerId) {
             const container = document.getElementById(containerId);
-            if (!container) return; // Seguridad por si el ID no existe
+            if (!container) return;
             
             data.forEach(item => {
                 const card = document.createElement('div');
                 card.className = 'pronoun-card';
+                // Usamos textContent limpio para el botón de audio
+                const cleanText = item.en.replace(/<[^>]*>?/gm, '').replace(/'/g, "\\'");
+                
                 card.innerHTML = `
                     <div>
                         <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">${item.en}</p>
                         <p style="color: #64748b; font-size: 0.9rem; font-style: italic;">${item.es}</p>
                     </div>
-                    <button class="btn-audio" onclick="playText('${item.en.replace(/<[^>]*>?/gm, '').replace(/'/g, "\\'")}')">▶️ Escuchar</button>
+                    <button class="btn-audio" onclick="playText('${cleanText}')">▶️ Escuchar</button>
                 `;
                 container.appendChild(card);
             });
         }
-        
-        // 5. FUNCIÓN PARA REPRODUCIR VOZ
+
+        // 5. FUNCIÓN DE AUDIO
         function playText(text) {
-            // Cancelar cualquier audio en curso antes de empezar uno nuevo
             synth.cancel();
             const utterance = new SpeechSynthesisUtterance(text);
             utterance.lang = 'en-US';
             utterance.rate = parseFloat(speedInput.value) || 0.8;
             synth.speak(utterance);
         }
-        
+
         // 6. CONTROL DE VELOCIDAD
-        if (speedInput) {
-            speedInput.oninput = () => {
-                speedVal.innerText = speedInput.value;
-            };
-        }
-        
-        // 7. NAVEGACIÓN DE SECCIONES (GasServicios)
+        speedInput.oninput = () => {
+            speedVal.innerText = speedInput.value;
+        };
+
+        // 7. NAVEGACIÓN
         function mostrarSeccion(id) {
             const secciones = document.querySelectorAll('.seccion');
             secciones.forEach(s => s.classList.remove('visible'));
-            
-            const target = document.getElementById(id);
-            if (target) target.classList.add('visible');
+            document.getElementById(id).classList.add('visible');
             
             const btns = document.querySelectorAll('.botones button');
             btns.forEach(b => b.classList.remove('active'));
-            
             const activeBtn = document.getElementById('btn' + id.charAt(0).toUpperCase() + id.slice(1));
             if (activeBtn) activeBtn.classList.add('active');
         }
-        
-        // 8. INICIALIZACIÓN AL CARGAR LA PÁGINA
+
+        // 8. INICIO
         document.addEventListener('DOMContentLoaded', () => {
-            // Renderiza la lista de pronombres
             renderPhrases(pronounPhrases, 'pronoun-container');
-            
-            // Renderiza tus 3 frases en la sección de Uso Técnico
             renderPhrases(techPhrases, 'tech-container');
-            
-            // Actualiza el año del footer
-            const yearSpan = document.getElementById('currentYear');
-            if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
         });
     </script>
 </body>
