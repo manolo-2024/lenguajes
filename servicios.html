@@ -89,15 +89,60 @@
         <footer class="footer">
             <div class="footer-section">
                 <h3>Legal</h3>
-                <a href="#">Política de Privacidad</a>
-                <a href="#">Accesibilidad</a>
-                <a href="#">Términos y condiciones</a>
+                <a href="#" aria-label="Política de Privacidad">Política de Privacidad</a>
+                <a href="#" aria-label="Accesibilidad">Accesibilidad</a>
+                <a href="#" aria-label="Términos y condiciones">Términos y condiciones</a>
+                <a href="#" aria-label="Política de Cookies">Cookies</a>
             </div>
+
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <a href="#inicio" onclick="mostrarSeccion('nosotros')" aria-label="Ir a Inicio">Inicio</a>
+                <a href="#nosotros" onclick="mostrarSeccion('nosotros')" aria-label="Ir a Nosotros">Sobre Nosotros</a>
+                <a href="#servicios" onclick="mostrarSeccion('productos')" aria-label="Ir a Servicios">Servicios</a>
+                <a href="#contacto" aria-label="Ir a Contacto">Contacto</a>
+            </div>
+
             <div class="footer-section">
                 <h3>Contacto</h3>
-                <p>info@gasservicios.com</p>
-                <p>+34 900 000 000</p>
+                <p><a href="mailto:info@gasservicios.com" aria-label="Enviar email a info@gasservicios.com">info@gasservicios.com</a></p>
+                <p><a href="tel:+34900000000" aria-label="Llamar al 900 000 000">+34 900 000 000</a></p>
+                <p>Calle Principal 123, Madrid</p>
             </div>
+
+            <div class="footer-section">
+                <h3>Servicios</h3>
+                <p><a href="mailto:servicios@gasservicios.com" aria-label="Enviar email a servicios@gasservicios.com">servicios@gasservicios.com</a></p>
+                <p><a href="tel:+34900111111" aria-label="Llamar al 900 111 111">+34 900 111 111</a></p>
+                <p>Atención 24/7</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Portfolio</h3>
+                <a href="#" aria-label="Ver proyectos residenciales">Proyectos residenciales</a>
+                <a href="#" aria-label="Ver proyectos industriales">Proyectos industriales</a>
+                <a href="#" aria-label="Ver certificaciones">Certificaciones</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Redes Sociales</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">📘</a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">🐦</a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📸</a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">🔗</a>
+                </div>
+            </div>
+
+            <div class="footer-newsletter">
+                <h3>Newsletter</h3>
+                <form id="newsletterForm" novalidate>
+                    <label for="email">Suscríbete a nuestro boletín:</label>
+                    <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+
             <div class="footer-copyright">
                 <p>&copy; <span id="currentYear"></span> GasServicios. Todos los derechos reservados.</p>
             </div>
